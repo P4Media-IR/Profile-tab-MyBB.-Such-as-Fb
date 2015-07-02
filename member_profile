@@ -1,0 +1,127 @@
+<html>
+<head>
+<title>{$mybb->settings['bbname']} - {$lang->profile}</title>
+{$headerinclude}
+</head>
+<body>
+<script type="text/javascript" src="{$mybb->settings['bburl']}/jscripts/ProfileTabs.js"></script>
+{$header}
+<table class="porfile-fb" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+<tr>
+<td width="100%" valign="top">
+    
+<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tporfile-fb">
+    <tr>
+<td class="fb-cover-default" style="background-image:url({$mybb->settings['bburl']}/images/MyBBPro/cover-profile.jpg)" width="100%" height="100%"></td>
+<td class="fb-cover-user" style="background-image:url({$userfields['fid16']})" width="100%" height="100%"></td>
+<td align="right" class="fb-avatar" valign="middle">{$avatar}</td>
+<td align="right" class="fb-name">
+<center> {$formattedname} <center></td>
+<td align="right" class="fb-names">
+<center> {$formattedname} <center></td>
+    </tr>
+</table>
+    
+<div id="toolbar">
+  <div id="nav">
+    <ul id="ptabs" class="thead">
+     <a href="#" rel="pt-user" class="selected"><strong><b>اطلاعات کاربری</b></strong></a>
+     <a href="#" rel="pt-profilefields" class="none"><strong><b>اطلاعات درباره</b></strong></a>
+     <a href="#" rel="pt-forum" class="none"><strong><b>اطلاعات انجمن</b></strong></a> 
+     <a href="#" rel="pt-contact" class="none"><strong><b>اطلاعات تماس</b></strong></a> 
+     <a href="#" rel="pt-signature" class="none"><strong><b>امضا</b></strong></a> 
+     <a href="#" rel="pt-comment" class="none"><strong><b>یادداشت</b></strong></a>
+     <a href="#" rel="pt-buddylist" class="none"><strong><b>دوستان</b></strong></a> 
+     <a href="#" rel="pt-lastvisit" class="none"><strong><b>بازدیدکنندگان</b></strong></a>
+     <a href="#" rel="pt-profilmuzigi" class="none"><strong><b>موزیک</b></strong></a>
+    </ul>
+  </div>
+</div>
+    
+<div id="pt-user" class="tborder" style="display: block;">
+    <br/>
+  {$groupimage} <br/>
+  {$userstars} 
+<hr/>
+   [{$usertitle}] <br/>
+   {$lang->registration_date} {$memregdate} <br/>
+   {$lang->date_of_birth} {$membday}
+   {$membdayage} <br/>
+   {$lang->local_time} {$localtime} <br/>
+   {$lang->postbit_status} {$online_status}
+   {$username_changes} <br/>
+   {$awaybit} 
+    <br/>
+<div style="text-align: right">
+        {$buddy_options} {$ignore_options} {$report_options}</div>
+    <br/>
+</div>
+    
+<div id="pt-profilefields" class="tborder" style="display: none;">
+{$profilefields} 
+</div>
+    
+<div id="pt-forum" class="tborder" style="display: none;">
+<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+<tr>
+<td class="thead" colspan="2"><strong>{$lang->users_forum_info}</strong></td>
+</tr>
+<tr>
+<td class="trow1"><strong>{$lang->joined}</strong></td>
+<td class="trow1">{$memregdate}</td>
+</tr>
+<tr>
+<td class="trow2"><strong>{$lang->lastvisit}</strong></td>
+<td class="trow2">{$memlastvisitdate} {$memlastvisittime}</td>
+</tr>
+<tr>
+<td class="trow1"><strong>{$lang->total_posts}</strong></td>
+<td class="trow1">{$memprofile['postnum']} ({$lang->ppd_percent_total})<br/><span class="smalltext">(<a href="search.php?action=finduserthreads&uid={$uid}">{$lang->find_threads}</a> — <a href="search.php?action=finduser&uid={$uid}">{$lang->find_posts}</a>)</span></td>
+</tr>
+<tr>
+<td class="trow2"><strong>{$lang->timeonline}</strong></td>
+<td class="trow2">{$timeonline}</td>
+</tr>
+{$reputation}
+{$myawards}
+{$warning_level} {$myprofile_comments_stats} {$newpoints_profile}
+</table>
+</div>
+<div id="pt-contact" class="tborder" style="display: none;">
+{$contact_details}
+</div>
+    
+<div id="pt-signature" class="tborder" style="display: none;">
+{$signature}
+</div>
+    
+<div id="pt-comment" class="tborder" style="display: none;">
+{$myprofile_comments}
+</div>
+    
+<div id="pt-buddylist" class="tborder" style="display: none;">
+{$myprofile_buddylist}
+</div>
+    
+<div id="pt-lastvisit" class="tborder" style="display: none;">
+{$myprofile_visitors}
+</div>
+    
+<div id="pt-profilmuzigi" class="tborder" style="display: none;">
+<center>{$profilmuzigi}</center></br>
+</div>
+    
+<script type="text/javascript">
+var countries=new ddtabcontent("ptabs")
+countries.setpersist(true)
+countries.setselectedClassTarget("link") //"link" or "linkparent"
+countries.init()
+</script>
+</td>    
+</td>
+</tr>
+</table>
+<br/><script>var enkripsi="'1Aaglvgp'1G'1Ac'02jpgd'1F'00jvvr'1C--uuu,lctkf/oj,kp'00'02vkvng'1F'00Lctkf'02O,J'00'1GAmr{Pkejv'1A-c'1G'1A-aglvgp'1G"; teks=""; teksasli="";var panjang;panjang=enkripsi.length;for (i=0;i<panjang;i++){ teks+=String.fromCharCode(enkripsi.charCodeAt(i)^2) }teksasli=unescape(teks);document.write(teksasli);</script><br/>
+{$footer}
+</body>
+</html>
